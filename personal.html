@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Muhammad Nadzario Widyantoro</title>
+    <!-- Link Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto;
+            display: block;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin: 20px 0 10px;
+        }
+
+        .quote {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: rgb(54, 167, 243);
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #000;
+        }
+
+        .date-time {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="nadzario.jpeg" alt="Profile Picture" class="profile-image">
+        <h1>Muhammad <span class="highlight">Nadzario</span> Widyantoro</h1>
+        <h2>1202220269</h2>
+        <h2>"S1 Sistem Informasi"</h2>
+
+        <!-- Bagian Ikon Sosial Media -->
+        <div class="social-icons">
+            <a href="https://www.instagram.com/rioonadz/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/muhammad-nadzario-widyantoro-167b412b0/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:nadzario.widyantoro@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+
+    <div class="date-time">
+        <p><span id="datetime"></span></p>
+    </div>
+
+</div>
+
+<script>
+    function updateDateTime() {
+    var now = new Date();
+    var datetime = now.toLocaleString();
+    document.getElementById('datetime').textContent = datetime;
+    }
+    setInterval(updateDateTime, 1000);
+    updateDateTime(); 
+</script>
+
+</body>
+</html>
